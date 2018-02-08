@@ -73,3 +73,13 @@ if printExcercise:
 	for word in goodbye_list_items:
 		print(word.string)
 	print('------')
+
+	print('Width of Image:')
+	pic = soup.find('img')
+	print(pic.get('width', 'n/a'))
+	print('------')
+
+	url = soup.find('a')
+	print('URL:')
+	print(url.get('href'))
+	print('------')
