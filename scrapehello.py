@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 
 printHTML = False # Set True if want to print entire html document
 printLectureEx = False # Set True if want to print examples from lecture
+printExcercise = True # Set True if want to print lecture excercies
 
 f = open("hello.html")
 html = f.read()
@@ -64,4 +65,11 @@ if printLectureEx:
 	img_tag = soup.find('img')
 	print('The img source:')
 	print(img_tag['src'])
+	print('------')
+
+if printExcercise:
+	goodbye_list_items = all_goodbye_elements[0].find_all('li')
+	print('Words in Goodbye List:')
+	for word in goodbye_list_items:
+		print(word.string)
 	print('------')
