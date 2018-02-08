@@ -68,6 +68,17 @@ if printLectureEx:
 	print('------')
 
 if printExcercise:
+	########## New Requirement ############3
+	hello_list_items = all_hello_elements[0].find_all('li')
+	print('Words in Hello List:')
+	for wordh in hello_list_items:
+		print(wordh.string)
+	for i in range(2):
+		print('------')
+	print('Below this was not required, went ahead in lecture')
+	for i in range(2):
+		print('------')
+	################# Below this was not required, went ahead in lecture
 	goodbye_list_items = all_goodbye_elements[0].find_all('li')
 	print('Words in Goodbye List:')
 	for word in goodbye_list_items:
